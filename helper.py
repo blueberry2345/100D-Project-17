@@ -7,9 +7,12 @@ class Helper:
 
 
 
+
+    # Function that returns an AI-generated response to a prompt
     def respond(self, prompt):
         response = openai.Completion.create(
             engine="gpt-4o-mini",
             prompt=prompt,
             max_tokens = 100
         )
+        return response

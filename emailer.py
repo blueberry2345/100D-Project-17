@@ -12,7 +12,7 @@ class Emailer:
         self.server.login(email, password)
 
 
-
+    # Function that sends an email
     def send_email(self, recipient, subject, response):
-        message = "Subject: {subject}\n\n{body}"
+        message = f"Subject: {subject}\n\n{response}"
         self.server.sendmail(self.email, recipient, message)
